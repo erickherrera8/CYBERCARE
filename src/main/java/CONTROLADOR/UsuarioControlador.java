@@ -81,29 +81,27 @@ public void insertarUsuario(Usuario usuario) {
 
 
 
-public void eliminarUsuario(int idUsuario, String nombre, String contrasenia, String roles) {
+public void eliminarUsuario(String nombre) {
     try {
-        String sql = "call EliminarUsuario(?, ?, ?, ?)";
-        ejecutar = (PreparedStatement) conectar.prepareCall(sql);
-
-        ejecutar.setInt(1, idUsuario);
-        ejecutar.setString(2, nombre);
-        ejecutar.setString(3, contrasenia);
-        ejecutar.setString(4, roles);
-
-        int resultado = ejecutar.executeUpdate();
-
-        if (resultado > 0) {
-            JOptionPane.showMessageDialog(null, "Usuario eliminado con éxito");
-        } else {
-            JOptionPane.showMessageDialog(null, "No se pudo eliminar el usuario");
-        }
-
-        ejecutar.close();
+        String sql = "CALL EliminarUsuario(?)";
+        ejecutar = (PreparedStatement) conectar.prepareStatement(sql);
+        ejecutar.setString(1, nombre);
+        ejecutar.executeUpdate();
+        JOptionPane.showMessageDialog(null, "Usuario eliminado con éxito");
     } catch (SQLException e) {
-        System.out.println("Error SQL al eliminar usuario: " + e.getMessage());
+        System.out.println("Error al eliminar usuario: " + e.getMessage());
+    } finally {
+        try {
+            if (ejecutar != null) {
+                ejecutar.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al cerrar el PreparedStatement: " + e.getMessage());
+        }
     }
 }
+
+
 
 
 public void editarUsuario(String nombreAntiguo, String contraseniaAntigua, String RolAntiguo, String nuevoNombre, String nuevaContrasenia, String nuevosRoles) {

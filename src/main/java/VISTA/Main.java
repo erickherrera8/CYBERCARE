@@ -5,7 +5,7 @@
 package VISTA;
 
 import CONTROLADOR.Menu;
-import CONTROLADOR.PRUEBA;
+import CONTROLADOR.TablaUsuarios;
 
 /**
  *

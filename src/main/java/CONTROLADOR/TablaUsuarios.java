@@ -16,13 +16,13 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author 59398
  */
-public class PRUEBA extends javax.swing.JInternalFrame {
+public class TablaUsuarios extends javax.swing.JInternalFrame {
 
 
     /**
      * Creates new form PRUEBA
      */
-    public PRUEBA() {
+    public TablaUsuarios() {
         initComponents();
         setModelo();
 
@@ -50,6 +50,14 @@ public class PRUEBA extends javax.swing.JInternalFrame {
         txtRol = new javax.swing.JTextField();
         btnModificarUsuario = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jCheckBoxContra = new javax.swing.JCheckBox();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
         jTableUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -71,49 +79,68 @@ public class PRUEBA extends javax.swing.JInternalFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAgregarUsuario.setText("Agregar");
+        btnAgregarUsuario.setIcon(new javax.swing.ImageIcon("C:\\Users\\59398\\Desktop\\ABDD\\business_application_addmale_useradd_insert_add_user_client_2312.png")); // NOI18N
         btnAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
-        jPanel1.add(txtNombreU, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 150, -1));
+        jPanel1.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, -1, -1));
+        jPanel1.add(txtNombreU, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 150, -1));
 
-        jLabel1.setText("Contraseña");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel1.setText("Contraseña :");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
-        jLabel2.setText("Nombre");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel2.setText("Nombre :");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 90, -1));
 
-        jLabel3.setText("Rol");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
-        jPanel1.add(txtcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 150, -1));
+        jLabel3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel3.setText("Rol :");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        jPanel1.add(txtcontra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 150, -1));
 
-        btnEliminarUsuario.setText("Eliminar");
+        btnEliminarUsuario.setIcon(new javax.swing.ImageIcon("C:\\Users\\59398\\Desktop\\ABDD\\delete_delete_deleteusers_delete_male_user_maleclient_2348.png")); // NOI18N
         btnEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
-        jPanel1.add(txtRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 130, -1));
+        jPanel1.add(btnEliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, -1, -1));
+        jPanel1.add(txtRol, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 150, -1));
 
-        btnModificarUsuario.setText("Modificar");
+        btnModificarUsuario.setIcon(new javax.swing.ImageIcon("C:\\Users\\59398\\Desktop\\ABDD\\businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png")); // NOI18N
         btnModificarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(btnModificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, -1, -1));
+        jPanel1.add(btnModificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, -1, -1));
 
-        btnBuscar.setText("Buscar");
+        btnBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\59398\\Desktop\\ABDD\\business_man_usersearch_thesearch_theclient_2356.png")); // NOI18N
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, -1, -1));
+        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel4.setText("ADMINISTRACION DE USUARIOS");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\59398\\Desktop\\ABDD\\fondoazule50bien.jpg")); // NOI18N
+        jLabel5.setText("jLabel5");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 470));
+
+        jCheckBoxContra.setText("Mostrar contrasena");
+        jCheckBoxContra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxContraActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCheckBoxContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,53 +149,39 @@ public class PRUEBA extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(17, 17, 17)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(17, 17, 17))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarUsuarioActionPerformed
-        int filaSeleccionada = jTableUsuario.getSelectedRow();
+    int filaSeleccionada = jTableUsuario.getSelectedRow();
 
-        if (filaSeleccionada >= 0) {
-            DefaultTableModel modelo = (DefaultTableModel) jTableUsuario.getModel();
-            int idUsuario = Integer.parseInt(modelo.getValueAt(filaSeleccionada, 0).toString());
-            String nombre = modelo.getValueAt(filaSeleccionada, 1).toString();
-            String contrasenia = modelo.getValueAt(filaSeleccionada, 2).toString();
-            String roles = modelo.getValueAt(filaSeleccionada, 3).toString();
-
-            UsuarioControlador usuarioControlador = new UsuarioControlador();
-            usuarioControlador.eliminarUsuario(idUsuario, nombre, contrasenia, roles);
-
-            modelo.removeRow(filaSeleccionada);
-        } else {
-            JOptionPane.showMessageDialog(null, "Selecciona una fila para eliminar");
-        }
-    }//GEN-LAST:event_btnEliminarUsuarioActionPerformed
-
-    private void btnAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarUsuarioActionPerformed
-        String nombre = txtNombreU.getText();
-        String contrasenia = txtcontra.getText();
-        String rolIngresado = txtRol.getText(); 
-        Usuario uM = new Usuario(nombre, contrasenia, rolIngresado);
+    if (filaSeleccionada >= 0) {
+        DefaultTableModel modelo = (DefaultTableModel) jTableUsuario.getModel();
+        String nombre = modelo.getValueAt(filaSeleccionada, 0).toString();
 
         UsuarioControlador usuarioControlador = new UsuarioControlador();
-        usuarioControlador.insertarUsuario(uM);
-        listaPersonas.add(uM);
-        setDatos(uM);
-    }//GEN-LAST:event_btnAgregarUsuarioActionPerformed
+        usuarioControlador.eliminarUsuario(nombre);
+
+        modelo.removeRow(filaSeleccionada);
+    } else {
+        JOptionPane.showMessageDialog(null, "Selecciona una fila para eliminar");
+    }
+    }//GEN-LAST:event_btnEliminarUsuarioActionPerformed
 
     private void btnModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarUsuarioActionPerformed
         
@@ -231,6 +244,29 @@ public class PRUEBA extends javax.swing.JInternalFrame {
         txtRol.setText((String) modelo.getValueAt(jTableUsuario.getSelectedRow(), 3));
     }//GEN-LAST:event_jTableUsuarioMouseClicked
 
+    private void btnAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarUsuarioActionPerformed
+        String nombre = txtNombreU.getText();
+        String contrasenia = txtcontra.getText();
+        String rolIngresado = txtRol.getText();
+        Usuario uM = new Usuario(nombre, contrasenia, rolIngresado);
+
+        UsuarioControlador usuarioControlador = new UsuarioControlador();
+        usuarioControlador.insertarUsuario(uM);
+        listaPersonas.add(uM);
+        setDatos(uM);
+    }//GEN-LAST:event_btnAgregarUsuarioActionPerformed
+
+    private void jCheckBoxContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxContraActionPerformed
+
+     if ( jCheckBoxContra.isSelected()) {
+
+            txtcontra.setEchoChar((char) 0);
+        } else {
+
+            txtcontra.setEchoChar('•');
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxContraActionPerformed
+
    private ArrayList<Usuario> listaPersonas = new ArrayList<>();
     private DefaultTableModel modeloUsuario = new DefaultTableModel();
     
@@ -274,9 +310,12 @@ public void setModelo() {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEliminarUsuario;
     private javax.swing.JButton btnModificarUsuario;
+    private javax.swing.JCheckBox jCheckBoxContra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableUsuario;

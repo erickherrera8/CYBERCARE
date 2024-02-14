@@ -17,7 +17,7 @@ public class ConexionBDD {
      public java.sql.Connection conectar(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/bddproyecto","root","1234");
+            conexion=DriverManager.getConnection("jdbc:mysql://localhost:3306/bddproyecto","root","erick");
             System.out.println("CONECTADO A LA BASE DE DATOS"); 
         } catch (ClassNotFoundException | SQLException e)
         {

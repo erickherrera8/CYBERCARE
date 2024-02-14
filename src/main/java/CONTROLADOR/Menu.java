@@ -27,6 +27,7 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         escritorio = new javax.swing.JPanel();
+        lblFondo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         opFichaVehicular = new javax.swing.JMenuItem();
@@ -35,20 +36,39 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\59398\\Desktop\\ABDD\\BIENVENIDAMAIN.png")); // NOI18N
+
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 828, Short.MAX_VALUE)
+            .addGroup(escritorioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addComponent(lblFondo, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
         );
 
-        jMenu3.setText("USUARIOS");
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
+        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu3.setText("USUARIOS");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+
+        opFichaVehicular.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         opFichaVehicular.setText("Usuarios");
+        opFichaVehicular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                opFichaVehicularMouseClicked(evt);
+            }
+        });
         opFichaVehicular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 opFichaVehicularActionPerformed(evt);
@@ -58,6 +78,7 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
         jMenu1.setText("COMPUTADORAS");
 
         jMenuItem1.setText("Compus");
@@ -87,7 +108,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void opFichaVehicularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opFichaVehicularActionPerformed
-        PRUEBA ventanaLE=new PRUEBA();
+        TablaUsuarios ventanaLE=new TablaUsuarios();
         escritorio.add(ventanaLE);
         ventanaLE.show();
     }//GEN-LAST:event_opFichaVehicularActionPerformed
@@ -98,6 +119,16 @@ public class Menu extends javax.swing.JFrame {
         escritorio.add(ventanaC);
         ventanaC.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+lblFondo.setVisible (false);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu3MouseClicked
+
+    private void opFichaVehicularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_opFichaVehicularMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_opFichaVehicularMouseClicked
 
     /**
      * @param args the command line arguments
@@ -140,6 +171,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JLabel lblFondo;
     private javax.swing.JMenuItem opFichaVehicular;
     // End of variables declaration//GEN-END:variables
 }
