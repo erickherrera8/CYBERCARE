@@ -51,6 +51,11 @@ public class PRUEBA extends javax.swing.JInternalFrame {
         btnModificarUsuario = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+
         jTableUsuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
